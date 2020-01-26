@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <table>
+            <tr><th>ID</th><th>Name</th><th>Email</th><th>Password</th></tr>
+            <% data.forEach(function(x)
+            {
+                %>
+                <tr><td><%= x.ID %></td>
+                    <td><%= x.Name %></td>
+                    <td><%= x.Email %></td>
+                    <td><%= x.Password %></td>
+                    <td> <a href="/edit?id=<%= x.ID %>">Edit</a></td>
+                    <td> <a href="/del?id=<%= x.ID %>">Delete</a></td>
+                </tr>
+            <%
+            })%>
+        </table>
+    </body>
+</html>
